@@ -17,3 +17,5 @@ test_proj/media
 /test-media/
 .envrc
 .direnv/
+.tox/
+activate
