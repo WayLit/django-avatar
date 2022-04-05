@@ -1,3 +1,6 @@
+from avatar.conf import settings
+from avatar.models import Avatar
+from avatar.utils import cache_result, get_default_avatar_url, get_user
 from django import template
 from django.template.loader import render_to_string
 from django.urls import reverse

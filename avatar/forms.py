@@ -1,5 +1,7 @@
 import os
 
+from avatar.conf import settings
+from avatar.models import Avatar
 from django import forms
 from django.forms import widgets
 from django.template.defaultfilters import filesizeformat

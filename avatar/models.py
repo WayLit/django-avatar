@@ -157,7 +157,7 @@ class Avatar(models.Model):
                 image = image.resize((width, height), settings.AVATAR_RESIZE_METHOD)
                 thumb = BytesIO()
                 image.save(thumb, settings.AVATAR_THUMB_FORMAT, quality=quality)
-                thumb_file = ContentFile(thumb.getvalue())
+                thumb_file: File = ContentFile(thumb.getvalue())
             else:
                 thumb_file = File(orig)
             thumb_name = self.avatar_name(width, height)

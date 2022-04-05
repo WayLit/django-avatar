@@ -1,6 +1,7 @@
 from django.urls import re_path
 
 from avatar import views
+from django.urls import path
 
 urlpatterns = [
     re_path(r"^add/$", views.add, name="avatar_add"),

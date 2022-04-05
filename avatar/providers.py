@@ -20,7 +20,7 @@ if "avatar.providers.FacebookAvatarProvider" in settings.AVATAR_PROVIDERS:
         get_facebook_id = import_string(settings.AVATAR_FACEBOOK_GET_ID)
 
 
-class DefaultAvatarProvider(object):
+class DefaultAvatarProvider:
     """
     Returns the default url defined by ``settings.DEFAULT_AVATAR_URL``.
     """
@@ -30,7 +30,7 @@ class DefaultAvatarProvider(object):
         return get_default_avatar_url()
 
 
-class PrimaryAvatarProvider(object):
+class PrimaryAvatarProvider:
     """
     Returns the primary Avatar from the users avatar set.
     """
@@ -44,7 +44,7 @@ class PrimaryAvatarProvider(object):
             return avatar.avatar_url(width, height)
 
 
-class GravatarAvatarProvider(object):
+class GravatarAvatarProvider:
     """
     Returns the url for an avatar by the Gravatar service.
     """

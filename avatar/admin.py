@@ -4,7 +4,10 @@ from django.utils.translation import gettext_lazy as _
 
 from avatar.models import Avatar
 from avatar.signals import avatar_updated
-from avatar.utils import get_user_model
+from django.contrib import admin
+from django.contrib.auth import get_user_model
+from django.template.loader import render_to_string
+from django.utils.translation import gettext_lazy as _
 
 
 class AvatarAdmin(admin.ModelAdmin):
@@ -16,6 +19,7 @@ class AvatarAdmin(admin.ModelAdmin):
     )
     list_per_page = 50
 
+    @admin.display(description=_("Avatar"))
     def get_avatar(self, avatar_in):
         context = dict(
             {

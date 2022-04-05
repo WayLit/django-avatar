@@ -1,5 +1,3 @@
-from django.core.management.base import BaseCommand
-
 from avatar.conf import settings
 from avatar.models import Avatar, remove_avatar_images
 
