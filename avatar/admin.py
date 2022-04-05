@@ -19,7 +19,6 @@ class AvatarAdmin(admin.ModelAdmin):
     )
     list_per_page = 50
 
-    @admin.display(description=_("Avatar"))
     def get_avatar(self, avatar_in):
         context = dict(
             {
